@@ -1,1 +1,1 @@
-[]
+[{"_allAttributes":null,"_properties":null,"_methods":null,"file":"/Users/carl.carter/My Drive/Dev/cc-sfout-se-example-lwc/force-app/main/default/lwc/ccLWCOutExample/ccLWCOutExample.js","metadata":{"decorators":[],"classMembers":[{"name":"handleClick","type":"method","loc":{"start":{"line":5,"column":4},"end":{"line":7,"column":5}}}],"declarationLoc":{"start":{"line":3,"column":0},"end":{"line":9,"column":1}},"doc":"","exports":[{"type":"ExportDefaultDeclaration"}]},"updatedAt":"2023-10-04T14:46:13.407Z"}]
