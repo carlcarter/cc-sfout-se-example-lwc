@@ -1,0 +1,49 @@
+<template>
+    <div class="slds-grid slds-wrap container">
+        <!-- Data Collection Component -->
+        <div class="slds-col slds-size_1-of-1 data-collection">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-input type="number" name="deposit" label="Deposit" placeholder="Enter amount"></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-combobox name="term" label="Term" placeholder="Select term" options={termOptions} value={selectedTerm}></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-input type="number" name="annualMileage" label="Annual Mileage" placeholder="Enter number"></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-button variant="brand" label="Update Quotes" onclick={handleUpdate}></lightning-button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Finance Options Component -->
+        <template if:true={showQuotes}>
+            <div class="slds-col slds-size_1-of-1 finance-options">
+                <template for:each={financeOptions} for:item="option">
+                    <div key={option.id} class="slds-grid slds-gutters quote">
+                        <div class="slds-col slds-size_1-of-6">
+                            <strong>{option.provider}</strong>
+                        </div>
+                        <div class="slds-col slds-size_1-of-6">
+                            Type: {option.type}
+                        </div>
+                        <div class="slds-col slds-size_1-of-6">
+                            Monthly Payment: ${option.monthlyPayment}
+                        </div>
+                        <div class="slds-col slds-size_1-of-6">
+                            APR: {option.apr}%
+                        </div>
+                        <div class="slds-col slds-size_1-of-6">
+                            Term Length: {option.termLength}
+                        </div>
+                        <div class="slds-col slds-size_1-of-6">
+                            <lightning-button variant="brand" label="Apply"></lightning-button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>

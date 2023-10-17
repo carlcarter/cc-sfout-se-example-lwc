@@ -1,0 +1,15 @@
+.container {
+    padding: 1rem;
+}
+
+.data-collection, .finance-options {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.quote {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
